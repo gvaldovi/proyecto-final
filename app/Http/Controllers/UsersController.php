@@ -3,14 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    
+    public function firstUser()
+    {
+        User::create([
+            'name' => 'Gonzalo Valdovinos',
+            'email' => 'gvaldovi@gmail.com',
+            'password' => Hash::make('12345678'),
+            'photo' => '',
+            'status' => 1,
+            'id_branch' => 0,
+            'role' => 'Administrador', 
+            'last_login' => '',            
+        ]);
+
+        return 'User created';
+    }
+     public function index()
     {
         //
     }
