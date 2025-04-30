@@ -20,12 +20,12 @@
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @error('email')
                     <br>
-                    <div class=" alert alert-danger">Error con el Email</div>
+                    <div class=" alert alert-danger">Error con el Email o Contraseña</div>
                 @enderror
             </div>
 
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
